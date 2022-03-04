@@ -1,366 +1,58 @@
-/* load icon font from google */
-/* so you can use icons like special characters */
-/* @import statement MUST be before other CSS statement */
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-/* reset default */
-* {
-  margin: 0;
-  padding: 0;
-/* redefine width to include padding and border, instead of only content area   */
-  box-sizing: border-box;
+body{
+  background-color:black;
 }
-
-.header {
-  /* TODO make header occupy the whole row with display block */
-  display: block;
-  /* TODO make width 100% */
-  width: 100%;
-  /* TODO text align right   */
-  text-align: left;
-  /* rgba function for red/green/blue/transparency   */
-  background-color: rgba(0,0,0,0.8);  
-}
-
-/* for simplicity, we ignore search for this exercise */
-.header > .search {
-  /* TODO use display none to hide search module */
-  display: none;
-}
-
-/* IMPORTANT: multiple selector statements separated by comma */
-/* It is equivalent to have each separately with same {} body */
-/* hide checkbox and label */
-.header > input, 
-.header > label 
-{
-  /* TODO use display none to hide */
-  display: none;
-}
-
-.header > .nav {
-  /* TODO make navbar display inline-block */
-  display: inline-block;
-  /* TODO make width 100%   */
-  width: 100%;
-  /* TODO make padding 16px */
-  padding: 16px;
-}
-
-.header > .nav > .quick-access {
-  /* TODO make user-group links and quick-access links share with row using inline-block  */
-  display: inline-block;
-  /* TODO make quick-access width 30% */
-  width: 30%;
-  /* TODO text align left   */
-  text-align: left;
-}
-
-.header > .nav > .quick-access > li
-{
-  /* TODO make links side by side using inline-block */
-  display: inline-block;
-  /* TODO make left/right padding 4px */
-  padding: 0 4px;
-}
-
-.header > .nav > .quick-access > li > a
-{
-  /* TODO make all text color white */
-  color: white;
-  /* TODO set font type sans-serif */
-  font-family: sans-serif;
-  /* TODO set font size smaller 75% */
-  font-size: 100%;
-  /* TODO set texts to be uppercase */
-  text-transform: uppercase;
-  /* TODO remove underline */
-  text-decoration: none;
-}
-
- /* Part 3 */
-.wrapper {
-  height: 100vh;
-  /*This part is important for centering*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.typing-demo {
-  width: 11.5ch;
-  animation: typing 2s steps(40), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  font-size: 8em;
-  font-style:italic;
+.scroll-in {
+  font-size: 50px;
+  padding: 60px;
+  right-padding: 60px;
+  font-family:"San Francisco Display Semibold";
   color:white;
 }
-@keyframes typing {
-  from {
-    width: 0
-  }
+
+@font-face {
+  font-family: "San Francisco Display Semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold") format("svg")
 }
 
-body {
-  background:url('https://media2.giphy.com/media/hh5PZEXbTKi8L7OtYX/giphy.gif?cid=790b761108e385a4900f472b9f5af2ba8a3c486e45ce38bf&rid=giphy.gif&ct=g') no-repeat center;
-  background-size:cover;
-/* align icons like text */
+htmljs {
+  .scroll-in { opacity: 0; }
+}
+.button{
+  background-color: rgba(0, 0, 0, 0);; 
+  border: none;
+  color: white;
+  padding: 50px 2000px;
   text-align: center;
-}
-
- /* Part 2 - 2 */
-/* add code for screen less than 700px */
-@media (max-width: 700px) {
-  .wrapper > .typing-demo{
-    font-size: 400%;
-  }
-  .header > #nav + label + .nav {
-    /* TODO hide the navbar when checkbox is unchekced, using display: none */
-    display: none;
-    /* TODO set width 320px and padding 16px   */
-    width: auto 100%;
-    padding: 16px;   
-    background-color: lightblue;
-  }
-
-  /* the key here is the :checked selector which only select checkbox when it is checked */
-  .header > #nav:checked + label + .nav {
-    /* TODO show navbar when checkbox is checked, using display: block */
-    display: block;
-  }
-
-  /* use bottom border to implement the seperator line */
-  .header > .nav > .quick-access {
-    /* TODO user-group does not share row with anyone, using display: block   */
-    display: block;
-    /* TODO set its width 100%   */ 
-    width: 100%;
-    /* TODO align text on the center   */
-    text-align: center;
-    
-    /* use border as separator line */
-    border: 1px solid white;
-  /* only render bottom border by setting border-width: 0 for all other sides   */
-    border-width: 0 0 1px 0;
-  }
-
-  .header > .nav > .quick-access > li {
-    /* TODO place quick-acess links horizontally, using display: inline-block */
-    display: inline-block;
-    /* TODO add margin top/right/bottom/left with 0/4px/16px/4px */
-    margin: 0 4px 16px 4px;
-  }
-
-  .header > .nav > .user-group {
-    /* TODO user-group does not share row with anyone, using display: block   */
-    display: block;
-    /* TODO set its width 100%   */
-    width: 100%;
-    /* TODO align text on the left   */
-    text-align: left;
-  }
-
-  /* TODO dropdown overlap other content. Use position   */
-  .header > .nav {
-    /* TODO position absolute */
-    position: absolute;
-    /* TODO top/right as 48px/0     */
-    top: 48px;
-    right: 0;
-    /* TODO z-index 100     */
-    z-index: 100;
-    /* TODO text align to left */
-    text-align: left;
-  }   
-
-  /* make label as icon   */
-  .header > label {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    padding: 16px;
-    color: lightblue;
-  }
-
-  /* change text color to be black   */
-  .header > .nav > .quick-access > li > a
-  {
-    color: white;
-  }
-}
-
- /* Part 4 */
-/* load font awesome */
-@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
-
-/* reset default */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* TODO start from here below */
-
-.footer {
-  /* TODO take whole row and 32px/16px padding */
-  display: block;
-  width: 100%;
-  padding: 10px 10px;
-  /* TODO white text on rbg 72/91/109 background */
-  color: white;
-  background-color: rgba(72,91,109,0.5);
-  /* TODO sans-serif font */
-  font-family: sans-serif;
-  /* TODO text align center */
-  text-align: center;
-}
-
-.footer > .contact,
-.footer > .links,
-.footer > .social
-{
-  /* TODO share row with 33.33% width and -4px rigth margin */
+  text-decoration: none;
   display: inline-block;
-  width: 33.33%;
-  margin-right: -4px;
-  /* TODO vertical align top */
-  vertical-align: top;
+  font-size: 30px;
+  font-family:"San Francisco Display Semibold";
 }
 
-.footer > .contact {
-  /* TODO margin bottom 24px  */
-  margin-bottom: 24px;
-  /* TODO text align left */
-  text-align: left;
+.next_button::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
 }
 
-.footer > .contact > a {
-  /* TODO NOT share row */
+.next_button:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.next_button::before {
+  content: " ";
   display: block;
-  /* TODO bottom margin 16px */
-  margin-bottom: 16px;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: grey;
+  z-index: -1;
+  transition: transform .3s ease;
 }
 
-.footer > .contact > span {
-  /* TODO NOT share row */
-  display: block;
-}
-
-.footer > .contact > span > a {
-  /* TODO white color and removew underline */
-  color: white;
-  text-decoration: none;
-}
-
-.footer > .links > div {
-  /* TODO share row with 50% width and -4px rigth margin */
-  display: inline-block;
-  width: 50%;
-  margin-right: -4px;
-  /* TODO text align left and vertical algin top*/
-  text-align: left;
-  vertical-align: top;
-}
-
-.footer > .links > div > a {
-  /* TODO NOT share row with 24px bottom margin */
-  display: inline-block;
-  margin-bottom: 5px;
-  /* TODO white color and remove underline */
-  color: white;
-  text-decoration: none;
-}
-
-.footer > .social {
-  /* TODO text algin right */
-  text-align: right;
-}
-
-.footer > .social > span {
-  /* TODO NOT share row with margin 6px/0 */
-  display: block;
-}
-
-.footer > .social > span:nth-child(3) {
-  /* TODO bottom margin 18px */
-  margin-bottom: 5px;
-}
-
-.footer > .social > span:first-child > a {
-  /* width = 16px(letter heigth) + 6px(top padding) + 6px(bottom padding) */
-  /* TODO width 28px and padding 6px/0 */
-  width: 28px;
-  padding: 6px 0;
-  /* TODO margin 0/3px */
-  margin: 0 3px;
-  /* TODO color rgb 72/91/109 on white background */  
-  color: rgb(72,91,109);
-  background-color: white;
-  /* TODO text align center */
-  text-align: center;
-  /* TODO remove underline */
-  text-decoration: none;
-}
-
-.footer > .social > span:nth-child(5) > a {
-  /* TODO white color and remove underline */
-  color: white;
-  text-decoration: none;
-}
-
-/* screen size between 600px - 800px */
-@media all and (max-width: 800px) and (min-width: 600px) {
-  .footer > .contact,
-  .footer > .links
-  {
-    /* TODO 50% width and 32px bottom margin */
-    width: 50%;
-    margin-bottom: 5px;
-    /* TODO text align center */
-  }
-  
-  .footer > .social {
-    /* TODO 100% width and 32px bottom margin */
-    width: 100%;
-    margin-bottom: 5px;
-    /* TODO text align center */
-    text-align: center;
-  }  
-}
-
-/* screen size less than 600px */
-@media all and (max-width: 600px) {
-  .footer > .contact,
-  .footer > .links,
-  .footer > .social {
-    /* TODO 100% width and 32px bottom margin */
-    width: 100%;
-    margin-bottom: 5px;
-    /* TODO text align center */
-    text-align: center;
-  }
-  
-  .footer > .links > div {
-    /* TODO text align center */
-    text-align: center;
-  }
-}
-
-/* part 5*/
-
-.sub-t{ 
-   font-size:30px;
-   position:absolute;
-   width:100%;
-   top:75%;
-   vertical-align:middle;
-   color: white;
-}
-@media all and (max-width: 700px) {
-  .sub-t{ 
-    font-size: 15px;
-  }
+.next_button {
+  position: relative;
+  font-size: 5px;
 }
