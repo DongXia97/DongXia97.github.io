@@ -1,0 +1,36 @@
+.header{
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}
+.cont{
+	width: 700px;
+	margin: 0 auto;
+}
+.conttitle{
+	color:rgb(59,147,153)
+}
+.contnr{
+	color:white;
+	padding: 0 30px;
+}
+hr{
+	width: 50%;
+}
+@media screen and (max-width: 700px) {
+    .change {
+        color:red;
+    }
+	.cont{
+		width: 100%;
+	}
+	hr{
+		width: 90%;
+	}
+	.conttitle{
+		color: green;
+	}
+	.header img{
+		width: 100%;
+	}
+}

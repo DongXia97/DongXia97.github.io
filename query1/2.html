@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Map</title>
+		<style>
+		body{
+			background-color: black;
+		}
+		.bubble{
+			width: 50px;
+			height: 50px;
+		}
+		.popBox {
+		            display: none;
+		        }
+		
+		        
+		        .popBox:target {
+		            align-items: center;
+		            display: flex;
+		            justify-content: center;
+		            position: absolute;
+		            left: 0;
+		            right: 0;
+		            top: 0;
+		            bottom: 0;
+		        }
+		
+		        
+		        .popBox .con {
+		            background-color: black;
+		            border-radius: 5px;
+		            padding: 1.5rem;
+		            position: relative;
+		            width: 25rem;
+					color:white;
+					opacity: 0.8;
+					animation:fadenum 1s 1;
+		        }
+		
+		        
+		        .popBox .close {
+		            display: block;
+		            position: relative;
+		        }
+				@keyframes fadenum{
+				   0%{opacity: 0;}
+				   100%{opacity: 0.8;}
+				}
+				
+		        .popBox .close::after {
+		            align-items: center;
+		            color: white;
+		            content: "×";
+		            cursor: pointer;
+		            border-radius: 50%;
+		            display: flex;
+		            font-size: 1.25rem;
+		            justify-content: center;
+		            position: absolute;
+		            right: -1.6rem;
+		            top: -1.4rem;
+		            height: 1rem;
+		            width: 2rem;
+		            z-index: 2;
+		        }
+		        
+		        .popBox::before {
+		            content: "";
+		            cursor: default;
+		            position: fixed;
+		            left: 0;
+		            right: 0;
+		            top: 0;
+		            bottom: 0;
+		        }
+		</style>
+	</head>
+	<body>
+		<div style="width: 100%;height: 100%;">
+		<img src="./img/2.png" width="100%" height="1000px"/>
+		<a href="#example1"><img src="./img/bubble.png" class="bubble" style="position: absolute;left:1070px;top:480px"/></a>
+		<a href="#example2"><img src="./img/bubble.png" class="bubble" style="position: absolute;left:1030px;top:280px"/></a>
+		<a href="#example3"><img src="./img/bubble.png" class="bubble" style="position: absolute;left:1010px;top:380px"/></a>
+		<a href="#example4"><img src="./img/bubble.png" class="bubble" style="position: absolute;left:940px;top:180px"/></a>
+		<a href="#example5"><img src="./img/bubble.png" class="bubble" style="position: absolute;left:770px;top:380px"/></a>
+		<a href="#example6"><img src="./img/bubble.png" class="bubble" style="position: absolute;left:670px;top:180px"/></a>
+		</div>
+		<article class="popBox" id="example1">
+		    <div class="con">
+		        <a href="#" class="close"></a>
+				<p style="text-align: center;color:rgb(37,176,159)">When did the Lockdown of Shanghai begin because of the pandemic?</p>
+		        <p>Shanghai locked down the entire city at the middle of March. Yet my quarantine started at the beginning of March, because the someone next to my neighborhood tested positive. Before the entire lockdown, I was able to go out for four or five days, and then the city locked down. First from the district, and then Pudong Puxi and then the entire city (4.1 or so began). In the middle of March I can still go out within my neighbourhood, but the end of March I can only go down to dump the garbage.</p>
+		    </div>
+		</article>
+		<article class="popBox" id="example2">
+		    <div class="con">
+		        <a href="#" class="close"></a>
+				<p style="text-align: center;color:rgb(37,176,159)">How did living in quarantine affect you?</p>
+		        <p>From the study aspect is that all classes switched to remote, which is less easy to focus than in the actual classroom. Classes are less interactive, sometimes it is boring. In terms of living aspect, I can't go out of the apartment building, and the way of getting food is group purchase, or the community distribute government supplies (mostly food). Also quarantine is way too boring, I have been in a very bad mood lately. Everyday my life is having online classes, writing homework, doing housework, cooking or watching TV shows.</p>
+		    </div>
+		</article>
+		<article class="popBox" id="example3">
+		    <div class="con">
+		        <a href="#" class="close"></a>
+				<p style="text-align: center;color:rgb(37,176,159)">I heard that you can't order take-out/delivery and you can't go out of your neighborhood, how do you solve the problem of eating?</p>
+		        <p>We can only group purchase food, so in this case there won’t be a lot of delivery guy. It will only be 1 or 2 people deliver food to our neighborhood. We can only pick up these food by groups, we cannot all go downstairs. Last time we ordered KFC and Shake Shack. Same way to order groceries. The price is much more expensive than usual, a normal single apple cost 3 dollars now.</p>
+		    </div>
+		</article>
+		<article class="popBox" id="example4">
+		    <div class="con">
+		        <a href="#" class="close"></a>
+				<p style="text-align: center;color:rgb(37,176,159)">What do you do to spend your time in quarantine, do you take online classes?</p>
+		        <p>I live alone in a studio. Like I said above, I mostly have online classes, and do my homework. Sometimes I do fitness and play games.</p>
+		    </div>
+		</article>
+		<article class="popBox" id="example5">
+		    <div class="con">
+		        <a href="#" class="close"></a>
+				<p style="text-align: center;color:rgb(37,176,159)">What is your thoughts about the lockdown of the city and do you have any advice for the lockdown?</p>
+		        <p>When Shanghai was about to lock down, my parents and friends advised me to stock some food, but then the Shanghai official social media posted that the city would not be lockdown, so I didn't care too much. Few days later, Shanghai locked down. Then we all can't buy any food. I have to wake up 6AM everyday to see if there is any food or groceries left, but sometimes the app for this lags. I added a lot of group chat just to buy food from my neighborhood. Although the my neighborhood locked down but the number of people who tested positive is still increasing within my neighborhood, which means the spread is inside my apartment neighborhood since no one from outside can come in. I guess the way of spread is when people go downstairs to pick up delivery, dump garbage or do PCR test. I hope there is a better way for this.</p>
+		    </div>
+		</article>
+		<article class="popBox" id="example6">
+		    <div class="con">
+		        <a href="#" class="close"></a>
+				<p style="text-align: center;color:rgb(37,176,159)">Do you have anything to add or want to say?</p>
+		        <p>Just today (April 7, 2022) Shanghai has 20,000 new cases, I guess the city will lock down for a while. Besides, the government's policy at the worst time of the pandemic in Shanghai was not issued quite on time, leading to the lockdown for entire Shanghai at the end.</p>
+		    </div>
+		</article>
+	</body>
+</html>
