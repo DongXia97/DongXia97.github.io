@@ -1,0 +1,65 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.hdlink{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.hdlink:hover{
+	color:rgb(145,145,145);
+}
+.bdlink{
+	text-decoration: none;
+	color: rgb(24,165,118);
+}
+.bdlink:hover{
+	color:rgb(255,128,0);
+}
+@font-face {
+	font-family:"SRbold";
+	src: url('../font/Bold.otf');
+}
+@font-face {
+	font-family:"SRlight";
+	src: url('../font/Light.otf');
+}
+body{
+	background-color: rgb(35,35,35);
+	color: white;
+	font-family: SRbold;
+}
+.header{
+	padding: 20px;
+}
+.hdleft{
+	float: left;
+}
+.hdright{
+	float: right;
+}
+.cont{
+	margin: 0 auto;
+	padding: 20px;
+}
+.cont .bt{
+	font-weight: 300;
+	font-size: 30px;
+}
+.cont p{
+	font-family: SRlight;
+	color: white;
+	font-size: 18px;
+	margin: 3px;
+}
+.pnr{
+	padding: 20px;
+}
+.pnrbt{
+	font-size: 43px;
+}
+.li{
+	font-size: 18px;
+	font-family: SRlight;
+	color: grey;
+}

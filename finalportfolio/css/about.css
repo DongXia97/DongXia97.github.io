@@ -1,0 +1,108 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.hdlink{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.hdlink:hover{
+	color:rgb(145,145,145);
+}
+.bdlink{
+	text-decoration: none;
+	color: rgb(24,165,118);
+}
+.bdlink:hover{
+	color:rgb(255,128,0);
+}
+#zdbj{
+	margin: 0 atuo;
+}
+@font-face {
+	font-family:"SRbold";
+	src: url('../font/Bold.otf');
+}
+@font-face {
+	font-family:"SRlight";
+	src: url('../font/Light.otf');
+}
+body{
+	color: white;
+	font-family: SRbold;
+	background-color: rgb(16,16,16);
+}
+.header{
+	padding: 20px;
+	background-color: rgb(221,221,221);
+	width: 20%;
+	height: 958px;
+	float: left;
+	margin-left: 10px;
+}
+.me{
+	margin: 0;
+	float: left;
+}
+.me img{
+	width: 100%;
+	height: 1000px;
+}
+.header2{
+	padding: 20px;
+	background-color: rgb(16,16,16);
+	width: 20%;
+	height: 958px;
+	float: left;
+	text-align: right;
+}
+.cont1{
+	margin-top: 400px;
+	width: 20%;
+	position: absolute;
+	background-color: rgb(221,221,221);
+}
+.cont1 p{
+	font-family: SRlight;
+}
+.cont1 .bt{
+	font-size:37px;
+	font-weight:400;
+	color: black;
+}
+.cont2{
+	right: 300px;
+	margin-top: 530px;
+	position: absolute;
+	float: left;
+	font-family: SRlight;
+	font-weight:300;
+	font-size:18px;
+	width: 25%;
+}
+.cont2 .bt{
+	color:rgba(255, 255, 255, 0.57);
+}
+.cont3{
+	right: 300px;
+	margin-top: 630px;
+	position: absolute;
+	float: left;
+	font-family: SRlight;
+	font-weight:300;
+	font-size:18px;
+	width: 25%;
+}
+.cont3 .bt{
+	color:rgba(255, 255, 255, 0.57);
+}
+.cont4{
+	right: 50px;
+	margin-top: 920px;
+	position: absolute;
+	float: left;
+	font-family: SRlight;
+	font-weight:300;
+	font-size:18px;
+	width: 21%;
+}

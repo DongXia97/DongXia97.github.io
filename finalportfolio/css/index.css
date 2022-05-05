@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.hdlink{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.hdlink:hover{
+	color:rgb(145,145,145);
+}
+.bdlink{
+	text-decoration: none;
+	color: rgb(24,165,118);
+}
+.bdlink:hover{
+	color:rgb(255,128,0);
+}
+@font-face {
+	font-family:"SRbold";
+	src: url('../font/Bold.otf');
+}
+body{
+	background-color: rgb(35,35,35);
+	color: white;
+	font-family: SRbold;
+}
+.header{
+	padding: 20px;
+}
+.hdleft{
+	float: left;
+}
+.hdright{
+	float: right;
+}
+.ppp{
+	font-style:normal;
+	font-weight: 800;
+	font-size: 95px;
+	width: 700px;
+	margin: 0 auto;
+}
+@media screen and (max-width: 700px) {
+   .ppp{
+	   width: 100%;
+	   font-size: 35px;
+	   text-align: center;
+	   margin-top:180px;
+   }
+}
