@@ -54,7 +54,7 @@ body{
 }
 @media screen and (max-width: 700px) {
 	.cont img{
-		width: 36%;
+		width: 100%;
 	}
 	
 	}
